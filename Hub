@@ -2,6 +2,6 @@ local gp = game.PlaceId
 
 if gp == 9530846958 then 
    return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Epsilon'))()
-elseif gp == 5580987851 then 
-   return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Epsilon'))()
+elseif gp == 8350658333 then 
+   return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Fakewoken%203'))()
 end
