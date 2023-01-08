@@ -37,7 +37,7 @@ LegitSecond:AddList({text = "Dungeons", flag = "AimbotKey", value = "Orden Dunge
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5769, 325, 632)
                 a.Completed:Wait()
             end
-        elseif mob == "Orden Dungeon" then
+    elseif mob == "Orden Dungeon" then
             while mob == "Orden Dungeon" do 
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2753.781982421875, 461.7503967285156, -72.50739288330078)
                 a.Completed:Wait()
@@ -46,83 +46,83 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5769, 32
         end
 end})
 LegitSecond:AddList({text = "Teleports", flag = "AimbotKey" , value = "Tundra 7" , value = "Tundra 6" , value = "Tundra 5",  value = "Tundra 3", value = "Tundra 2"  , value = "Tundra 1" ,  value = "Forest 7" , value = "Forest 6", value = "Forest 5" ,  value = "Forest 4" , value = "Forest 3" ,  value = "Forest 2"  , value = "Forest 1",  value = "Ores 3", value = "Ores 1", value = "Ores 2", value = "--", values = {"--", "Ores 1" ,"Ores 2" ,"Ores 3","Forest 1" , "Forest 2" , "Forest 3", "Forest 4", "Forest 5", "Forest 6", "Forest 7", "Tundra 1" , "Tundra 2" , "Tundra 3", "Tundra 5", "Tundra 6" , "Tundra 7"}, callback = function(mob)
-    if mob == "Ores 1" then
+                    if mob == "Ores 1" then
         while mob == "Ores 1" do 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2712.74121, 283.625549, 7.80712891, 0, 0, 1, 0, 1, -0, -1, 0, 0)
                 a.Completed:Wait()
             end
-        elseif mob == "Ores 2" then
+                    elseif mob == "Ores 2" then
             while mob == "Ores 2" do 
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2847.1001, 285.25, -80.4999771, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                 a.Completed:Wait()
                     a.Completed:Wait()
                 end
-    elseif mob == "Ores 3" then
-        while mob == "Ores 3" do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2300.43213, 40.8898087, -141.539246, 0, 0, 1, 0, 1, -0, -1, 0, 0)
-                a.Completed:Wait()
-        end
-            elseif mob == "Forest 1" then
-                while mob == "Forest 1" do
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1726.31567, 156.5, 683.190247, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    elseif mob == "Ores 3" then
+                while mob == "Ores 3" do
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2300.43213, 40.8898087, -141.539246, 0, 0, 1, 0, 1, -0, -1, 0, 0)
                         a.Completed:Wait()
                 end
-                    elseif mob == "Forest 2" then
-                        while mob == "Forest 2" do
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2488.9751, 209.552719, -449.377502, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                    elseif mob == "Forest 1" then
+                        while mob == "Forest 1" do
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1726.31567, 156.5, 683.190247, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                                 a.Completed:Wait()
                         end
-                            elseif mob == "Forest 3" then
+                    elseif mob == "Forest 2" then
+                                while mob == "Forest 2" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2488.9751, 209.552719, -449.377502, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Forest 3" then
                                 while mob == "Forest 3" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2549.58057, 319.342651, 241.914902, 1, 0, 0, 0, 1, 0, 0, 0, 1)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Forest 4" then
+                    elseif mob == "Forest 4" then
                                 while mob == "Forest 4" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2279.57056, 146.5, 946.665283, 0, 0, 1, 0, 1, -0, -1, 0, 0)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Forest 5" then
+                    elseif mob == "Forest 5" then
                                 while mob == "Forest 5" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1810.56433, 115.794342, -537.608765, 0, 0, 1, 0, 1, -0, -1, 0, 0)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Forest 6" then
+                    elseif mob == "Forest 6" then
                                 while mob == "Forest 6" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2707.89429, 283.299988, -822.113831, 0.996191859, 0, 0.0871884301, 0, 1, 0, -0.0871884301, 0, 0.996191859)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Forest 7" then
+                    elseif mob == "Forest 7" then
                                 while mob == "Forest 7" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1690.29492, 370.166351, -1128.71692, 0, 0, 1, 0, 1, -0, -1, 0, 0)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Tundra 1" then
+                    elseif mob == "Tundra 1" then
                                 while mob == "Tundra 1" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3836.78003, 595.537476, -7.08199978, -1, 0, 0, 0, 1, 0, 0, 0, -1)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Tundra 2" then
+                    elseif mob == "Tundra 2" then
                                 while mob == "Tundra 2" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3950.1228, 549.052979, -539.440186, -1, 0, 0, 0, 1, 0, 0, 0, -1)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Tundra 3" then
+                    elseif mob == "Tundra 3" then
                                 while mob == "Tundra 3" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4790.07031, 580.293762, -1138.74426, -1, 0, 0, 0, 1, 0, 0, 0, -1)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Tundra 5" then
+                    elseif mob == "Tundra 5" then
                                 while mob == "Tundra 5" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5961.93018, 1318.30151, 127.020653, 0, 0, -1, 0, 1, 0, 1, 0, 0)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Tundra 6" then
+                    elseif mob == "Tundra 6" then
                                 while mob == "Tundra 6" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5470.979, 1057.56885, 938.159973, 0, 0, -1, 0, 1, 0, 1, 0, 0)
                                         a.Completed:Wait()
                                 end
-                            elseif mob == "Tundra 7" then
+                    elseif mob == "Tundra 7" then
                                 while mob == "Tundra 7" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4982.2876, 692.482422, 1508.12769, 0, 0, 1, 0, 1, -0, -1, 0, 0)
                                         a.Completed:Wait()
