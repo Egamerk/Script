@@ -4,13 +4,21 @@ local LegitTab = library:AddTab("Main");
 local LegitColunm1 = LegitTab:AddColumn();
 local LegitMain = LegitColunm1:AddSection("Local Player")
 
+local speed = 16;
+
 LegitMain:AddToggle{text = "Enabled", flag = "TriggerEnabled"}:AddBind({flag = "keybind",Enum.KeyCode.LeftAlt,function(key)
     print(key)
 end})
 LegitMain:AddToggle{text = "Fly"}:AddSlider{text = "Fly Speed", min = 0, max = 100, value = 0, suffix = "‎ "}
-LegitMain:AddToggle{text = "Speed"}:AddSlider{text = "Speed", min = 0, max = 1068, value = 16, suffix = "‎ ", callback = function(y)
-    game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = y
-end}
+LegitMain:AddToggle{text = "Speed", callback = function(bool)
+    if bool then
+        game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = speed
+    else
+        game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = 16
+    end
+end}:AddSlider{text = "Speed", min = 0, max = 1068, value = 16, suffix = "‎ ", callback = function(speedValue)
+speed = speedValue
+    end}
 LegitMain:AddButton({text = "Reset Speed", callback = function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = 16
