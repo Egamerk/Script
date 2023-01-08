@@ -9,7 +9,6 @@ LegitMain:AddToggle{text = "Enabled", flag = "TriggerEnabled"}:AddBind({flag = "
 end})
 LegitMain:AddToggle{text = "Fly"}:AddSlider{text = "Fly Speed", min = 0, max = 100, value = 0, suffix = "‎ "}
 LegitMain:AddToggle{text = "Speed"}:AddSlider{text = "Speed", min = 0, max = 1068, value = 16, suffix = "‎ ", callback = function(y)
-    wait()
     game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = y
 end}
 LegitMain:AddButton({text = "Reset Speed", callback = function()
