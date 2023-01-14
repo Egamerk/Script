@@ -4,4 +4,6 @@ if gp == 9530846958 then
    return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Epsilon'))()
 elseif gp == 2976140098 then 
    return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Fakewoken%203'))()
+elseif gp == 189707 then 
+   return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Natural%20Disaster%20Survival'))()
 end
