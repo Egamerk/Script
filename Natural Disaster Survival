@@ -1,0 +1,273 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Better/main/Jan'))()
+-- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
+local LegitTab = library:AddTab("Main"); 
+local LegitColunm1 = LegitTab:AddColumn();
+local LegitMain = LegitColunm1:AddSection("Local Player")
+
+local speed = 16;
+
+LegitMain:AddToggle{text = "Enabled", flag = "TriggerEnabled"}:AddBind({flag = "keybind",Enum.KeyCode.LeftAlt,function(key)
+    print(key)
+end})
+LegitMain:AddToggle{text = "Fly"}:AddSlider{text = "Fly Speed", min = 0, max = 100, value = 0, suffix = "‎ "}
+LegitMain:AddToggle{text = "Speed", callback = function(bool)
+
+    if bool then
+        game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = speed
+    else
+        game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = 16
+    end
+
+end}:AddSlider{text = "Speed", min = 0, max = 1068, value = 16, suffix = "‎ ", callback = function(speedValue)
+speed = speedValue
+    end}
+LegitMain:AddButton({text = "Reset Speed", callback = function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = 16
+end});
+LegitMain:AddSlider{text = "Mana % (Uncapped)", min = 0, max = 1000, value = 0, suffix = "%", callback = function(s)
+	game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.Mana.Value = s
+end};
+LegitMain:AddSlider{text = "Mana % (Resets on G)", min = 0, max = 100, value = 0, suffix = "%", callback = function(s)
+	game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.Mana.Value = s
+end};
+
+local LegitSecond = LegitColunm1:AddSection("Humanoid")
+LegitSecond:AddList({text = "Dungeons", flag = "AimbotKey", value = "Orden Dungeon", value = "Crock Room", value = "--", values = {"--", "Crock Room" ,"Orden Dungeon"}, callback = function(mob)
+    if mob == "Crock Room" then
+        while mob == "Crock Room" do 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5769, 325, 632)
+                a.Completed:Wait()
+            end
+    elseif mob == "Orden Dungeon" then
+            while mob == "Orden Dungeon" do 
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2753.781982421875, 461.7503967285156, -72.50739288330078)
+                a.Completed:Wait()
+                    a.Completed:Wait()
+                end
+        end
+end})
+LegitSecond:AddList({text = "Teleports", flag = "AimbotKey" , value = "Tundra 7" , value = "Tundra 6" , value = "Tundra 5",  value = "Tundra 3", value = "Tundra 2"  , value = "Tundra 1" ,  value = "Forest 7" , value = "Forest 6", value = "Forest 5" ,  value = "Forest 4" , value = "Forest 3" ,  value = "Forest 2"  , value = "Forest 1",  value = "Ores 3", value = "Ores 1", value = "Ores 2", value = "--", values = {"--", "Ores 1" ,"Ores 2" ,"Ores 3","Forest 1" , "Forest 2" , "Forest 3", "Forest 4", "Forest 5", "Forest 6", "Forest 7", "Tundra 1" , "Tundra 2" , "Tundra 3", "Tundra 5", "Tundra 6" , "Tundra 7"}, callback = function(mob)
+                    if mob == "Ores 1" then
+        while mob == "Ores 1" do 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2712.74121, 283.625549, 7.80712891, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+                a.Completed:Wait()
+            end
+                    elseif mob == "Ores 2" then
+            while mob == "Ores 2" do 
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2847.1001, 285.25, -80.4999771, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                a.Completed:Wait()
+                    a.Completed:Wait()
+                end
+                    elseif mob == "Ores 3" then
+                while mob == "Ores 3" do
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2300.43213, 40.8898087, -141.539246, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+                        a.Completed:Wait()
+                end
+                    elseif mob == "Forest 1" then
+                        while mob == "Forest 1" do
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1726.31567, 156.5, 683.190247, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                a.Completed:Wait()
+                        end
+                    elseif mob == "Forest 2" then
+                                while mob == "Forest 2" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2488.9751, 209.552719, -449.377502, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Forest 3" then
+                                while mob == "Forest 3" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2549.58057, 319.342651, 241.914902, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Forest 4" then
+                                while mob == "Forest 4" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2279.57056, 146.5, 946.665283, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Forest 5" then
+                                while mob == "Forest 5" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1810.56433, 115.794342, -537.608765, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Forest 6" then
+                                while mob == "Forest 6" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2707.89429, 283.299988, -822.113831, 0.996191859, 0, 0.0871884301, 0, 1, 0, -0.0871884301, 0, 0.996191859)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Forest 7" then
+                                while mob == "Forest 7" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1690.29492, 370.166351, -1128.71692, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Tundra 1" then
+                                while mob == "Tundra 1" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3836.78003, 595.537476, -7.08199978, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Tundra 2" then
+                                while mob == "Tundra 2" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3950.1228, 549.052979, -539.440186, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Tundra 3" then
+                                while mob == "Tundra 3" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4790.07031, 580.293762, -1138.74426, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Tundra 5" then
+                                while mob == "Tundra 5" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5961.93018, 1318.30151, 127.020653, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Tundra 6" then
+                                while mob == "Tundra 6" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5470.979, 1057.56885, 938.159973, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+                                        a.Completed:Wait()
+                                end
+                    elseif mob == "Tundra 7" then
+                                while mob == "Tundra 7" do
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4982.2876, 692.482422, 1508.12769, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+                                        a.Completed:Wait()
+            end
+        end
+end})
+LegitSecond:AddToggle{text = "Enabled", flag = "AimbotEnabled" }
+LegitSecond:AddSlider{text = "Aimbot FOV", flag = "AimbotFov", min = 0, max = 750, value = 105, suffix = "°"}
+LegitSecond:AddList({text = "Aimbot Key", flag = "AimbotKey", value = "On Aim", values = {"On Aim", "On Shoot"}});
+LegitSecond:AddDivider("Draw Fov");
+LegitSecond:AddToggle{text = "Enabled", flag = "TriggerEnabled"}:AddBind({flag = "TriggerBind", key = "One"});
+
+local LegitThird = LegitColunm1:AddSection("Removals")
+LegitThird:AddToggle{text = "Nofall(Cant Turn Off)", callback = function(Value)
+    wait()
+        cc = Value
+        while cc do task.wait()
+            pcall(function()
+            game.Players.LocalPlayer.Character.FallDamage:Destroy()
+            end)
+        end
+    end};
+local LegitColunm2 = LegitTab:AddColumn();
+local LegitForth = LegitColunm2:AddSection("Bullet Redirection")
+
+LegitForth:AddToggle{text = "Enabled", flag = "VisibleCheck"}
+
+local LegitFifth = LegitColunm2:AddSection("Recoil Control")
+LegitFifth:AddSlider{text = "Camera Kick", flag = "CameraKick", min = 5, max = 100, value = 100, suffix = "%"}
+-- [Rage Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
+local RageTab = library:AddTab("Visual"); 
+local RageColunm1 = RageTab:AddColumn();
+local RageMain = RageColunm1:AddSection("Auto Wall")
+
+RageMain:AddDivider("Main");
+RageMain:AddToggle{text = "Enabled", flag = "AutoWallEnabled"}
+
+-- [Library Settings UI] -----------------------------------------------------------------------------------------------------------------------------------------------------
+local SettingsTab = library:AddTab("Settings"); 
+local SettingsColumn = SettingsTab:AddColumn(); 
+local SettingsColumn2 = SettingsTab:AddColumn(); 
+local SettingSection = SettingsColumn:AddSection("Menu"); 
+local ConfigSection = SettingsColumn2:AddSection("Configs");
+local Warning = library:AddWarning({type = "confirm"});
+
+SettingSection:AddBind({text = "Open / Close", flag = "UI Toggle", nomouse = true, key = "End", callback = function()
+    library:Close();
+end});
+
+SettingSection:AddColor({text = "Accent Color", flag = "Menu Accent Color", color = Color3.new(0.599623620510101318359375, 0.447115242481231689453125, 0.97174417972564697265625), callback = function(color)
+    if library.currentTab then
+        library.currentTab.button.TextColor3 = color;
+    end
+    for i,v in pairs(library.theme) do
+        v[(v.ClassName == "TextLabel" and "TextColor3") or (v.ClassName == "ImageLabel" and "ImageColor3") or "BackgroundColor3"] = color;
+    end
+end});
+
+-- [Background List]
+local backgroundlist = {
+    Floral = "rbxassetid://5553946656",
+    Flowers = "rbxassetid://6071575925",
+    Circles = "rbxassetid://6071579801",
+    Hearts = "rbxassetid://6073763717"
+};
+
+-- [Background List]
+local back = SettingSection:AddList({text = "Background", max = 4, flag = "background", values = {"Floral", "Flowers", "Circles", "Hearts"}, value = "Floral", callback = function(v)
+    if library.main then
+        library.main.Image = backgroundlist[v];
+    end
+end});
+
+-- [Background Color Picker]
+back:AddColor({flag = "backgroundcolor", color = Color3.new(), callback = function(color)
+    if library.main then
+        library.main.ImageColor3 = color;
+    end
+end, trans = 1, calltrans = function(trans)
+    if library.main then
+        library.main.ImageTransparency = 1 - trans;
+    end
+end});
+
+-- [Tile Size Slider]
+SettingSection:AddSlider({text = "Tile Size", min = 50, max = 500, value = 50, callback = function(size)
+    if library.main then
+        library.main.TileSize = UDim2.new(0, size, 0, size);
+    end
+end});
+
+SettingSection:AddSlider({text = "Tile Size", min = 0, max = 100, value = 10, callback = function(speed)
+ local tweenspeed = speed
+end});
+
+-- [Discord Button]
+SettingSection:AddButton({text = "Discord", callback = function()
+end});
+
+-- [Config Box]
+ConfigSection:AddBox({text = "Config Name", skipflag = true});
+
+-- [Config List]
+ConfigSection:AddList({text = "Configs", skipflag = true, value = "", flag = "Config List", values = library:GetConfigs()});
+
+-- [Create Button]
+ConfigSection:AddButton({text = "Create", callback = function()
+    library:GetConfigs();
+    writefile(library.foldername .. "/" .. library.flags["Config Name"] .. library.fileext, "{}");
+    library.options["Config List"]:AddValue(library.flags["Config Name"]);
+end});
+
+-- [Save Button]
+ConfigSection:AddButton({text = "Save", callback = function()
+    local r, g, b = library.round(library.flags["Menu Accent Color"]);
+    Warning.text = "Are you sure you want to save the current settings to config <font color='rgb(" .. r .. "," .. g .. "," .. b .. ")'>" .. library.flags["Config List"] .. "</font>?";
+    if Warning:Show() then
+        library:SaveConfig(library.flags["Config List"]);
+    end
+end});
+
+-- [Load Button]
+ConfigSection:AddButton({text = "Load", callback = function()
+    local r, g, b = library.round(library.flags["Menu Accent Color"]);
+    Warning.text = "Are you sure you want to load config <font color='rgb(" .. r .. "," .. g .. "," .. b .. ")'>" .. library.flags["Config List"] .. "</font>?";
+    if Warning:Show() then
+        library:LoadConfig(library.flags["Config List"]);
+    end
+end});
+
+-- [Delete Button]
+ConfigSection:AddButton({text = "Delete", callback = function()
+    local r, g, b = library.round(library.flags["Menu Accent Color"]);
+    Warning.text = "Are you sure you want to delete config <font color='rgb(" .. r .. "," .. g .. "," .. b .. ")'>" .. library.flags["Config List"] .. "</font>?";
+    if Warning:Show() then
+        local config = library.flags["Config List"];
+        if table.find(library:GetConfigs(), config) and isfile(library.foldername .. "/" .. config .. library.fileext) then
+            library.options["Config List"]:RemoveValue(config);
+            delfile(library.foldername .. "/" .. config .. library.fileext);
+        end
+    end
+end});
+
+-- [Init] --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+library:Init();
+library:selectTab(library.tabs[1]);
