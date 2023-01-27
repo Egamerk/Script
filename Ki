@@ -1,3 +1,0 @@
-   if is_synapse_function then
-       messagebox("Kill Jiggers","Box Title Here",0)
-   end
