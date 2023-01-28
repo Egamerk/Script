@@ -5,6 +5,13 @@ local LegitColunm1 = LegitTab:AddColumn();
 local LegitMain = LegitColunm1:AddSection("Aim Assist")
 
 LegitMain:AddDivider("Main");
+LegitMain:AddToggle{text= "Auto Attack" , callback = function(AutoAttack)
+    while "AutoAttack" do 
+        game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
+    if not "AutoAttack" then break
+            end 
+        end
+    end}
 LegitMain:AddToggle{text = "Enabled", flag = "AimbotEnabled"}
 LegitMain:AddSlider{text = "Aimbot FOV", flag = "AimbotFov", min = 0, max = 750, value = 105, suffix = "°"}
 LegitMain:AddSlider{text = "Smoothing Factor", flag = "Smoothing", min = 0, max = 30, value = 3, suffix = "%"}
