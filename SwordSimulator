@@ -1,4 +1,4 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Better/main/Jan'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/Sword%20Simulator%20GUI", true))()
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Legit"); 
 local LegitColunm1 = LegitTab:AddColumn();
