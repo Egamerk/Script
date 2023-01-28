@@ -6,9 +6,10 @@ local LegitMain = LegitColunm1:AddSection("Aim Assist")
 
 LegitMain:AddDivider("Main");
 LegitMain:AddToggle{text= "Auto Attack" , callback = function(AutoAttack)
-    while "AutoAttack" do 
+    while AutoAttack do 
+        wait()
         game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
-    if not "AutoAttack" then break
+    if not AutoAttack then break
             end 
         end
     end}
