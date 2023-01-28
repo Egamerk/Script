@@ -3,9 +3,7 @@ local gp = game.PlaceId
 if gp == 9530846958 then 
    return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Epsilon'))()
 elseif gp == 2976140098 then 
-   return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Fakewoken%203'))()\
+   return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Fakewoken%203'))()
    elseif gp == 11040063484 then 
-	return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/SwordSimulator", true))()
-   
-   
-end
+   return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/SwordSimulator", true))()
+   end
