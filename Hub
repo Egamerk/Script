@@ -6,4 +6,6 @@ elseif gp == 2976140098 then
    return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Fakewoken%203'))()
    elseif gp == 11040063484 then 
    return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/SwordSimulator", true))()
+   elseif gp == 8651781069 then 
+   return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/Voxlblade", true))()
    end
