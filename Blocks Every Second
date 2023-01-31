@@ -1,28 +1,45 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/%2B1%20Blocks%20Every%20Second%20Gui", true))()
 --Functions/Global Varibles
-function DoAttack()
+function DoTap()
     spawn(function()
-    while getgenv().AutoAttack == true do    
-        game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
+    while getgenv().AutoTa == true do    
+    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
+    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
+    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
+    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
+    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
+    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
+    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
+    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
         wait() 
         end
     end)
 end
-getgenv().AutoAttack = false
-
+getgenv().AutoTa = false
+getgenv().Ra = false
 
 
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Legit"); 
 local LegitColunm1 = LegitTab:AddColumn();
-local LegitMain = LegitColunm1:AddSection("Aim Assist")
+local LegitMain = LegitColunm1:AddSection("Main")
 
-LegitMain:AddDivider("Main");
-LegitMain:AddToggle{text= "Auto Attack" , callback = function(Attack)
-    getgenv().AutoAttack = Attack
- if Attack then 
-    DoAttack()
- end
+LegitMain:AddToggle{text= "Auto Tap" , callback = function(Ta)
+    if getgenv().AutoTa == true then 
+        wait()
+        DoTap()
+    end
+end}:AddBind{text = "...", callback = function(Bind)
+    getgenv().AutoTa = Bind
+end}
+LegitMain:AddToggle{text= "Auto Tap" , callback = function(RaP)
+    if getgenv().Ra == true then 
+        RaP = true
+
+    end
+end}:AddBind{text = "...", callback = function(Re)
+    getgenv().Ra = Re
+
 end}
 LegitMain:AddToggle{text = "Enabled", flag = "AimbotEnabled"}
 LegitMain:AddSlider{text = "Aimbot FOV", flag = "AimbotFov", min = 0, max = 750, value = 105, suffix = "°"}
@@ -41,7 +58,10 @@ LegitSecond:AddSlider{text = "Extend Rate", flag = "ExtendRate", min = 0, max = 
 
 local LegitThird = LegitColunm1:AddSection("Trigger Bot")
 LegitThird:AddDivider("Main");
-LegitThird:AddToggle{text = "Enabled", flag = "TriggerEnabled"}:AddBind({flag = "TriggerBind", key = "One"});
+LegitThird:AddToggle{text = "Enabled", flag = "TriggerEnabled"}:AddBind({flag = "TriggerBind", key = "One", callback = function(R)
+print(R)
+    end
+});
 LegitThird:AddSlider{text = "Trigger Speed", flag = "TriggerSpeed", min = 0, max = 1000, value = 10, suffix = "%"}
 
 local LegitColunm2 = LegitTab:AddColumn();
