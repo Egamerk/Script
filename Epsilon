@@ -1,4 +1,4 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Better/main/Jan'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/Jan", true))()
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Main"); 
 local LegitColunm1 = LegitTab:AddColumn();
@@ -6,9 +6,6 @@ local LegitMain = LegitColunm1:AddSection("Local Player")
 
 local speed = 16;
 
-LegitMain:AddToggle{text = "Enabled", flag = "TriggerEnabled"}:AddBind({flag = "keybind",Enum.KeyCode.LeftAlt,function(key)
-    print(key)
-end})
 LegitMain:AddToggle{text = "Fly"}:AddSlider{text = "Fly Speed", min = 0, max = 100, value = 0, suffix = "‎ "}
 LegitMain:AddToggle{text = "Speed", callback = function(bool)
     if bool then
@@ -16,7 +13,7 @@ LegitMain:AddToggle{text = "Speed", callback = function(bool)
     else
         game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = 16
     end
-end}:AddSlider{text = "Speed", min = 0, max = 1068, value = 16, suffix = "‎ ", callback = function(speedValue)
+end}:AddSlider{text = "Speed", min = 0, max = 3000, value = 16, suffix = "‎ ", callback = function(speedValue)
 speed = speedValue
     end}
 LegitMain:AddButton({text = "Reset Speed", callback = function()
