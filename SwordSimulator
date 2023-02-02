@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/Sword%20Simulator%20GUI", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/Sword%20Simulator%20GUI", true))()
 --Functions/Global Varibles
 function DoAttack()
     spawn(function()
