@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/Voxlblade", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/Voxlblade", true))()
 --Functions/Global Varibles
 function DoAttack()
     spawn(function()
