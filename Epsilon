@@ -1,20 +1,54 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/Jan", true))()
+--Functions/Global Varibles--------------------------------------------------------------------------------------------------------------------------------------------------
+function DoSpeed()
+    spawn(function()
+    while getgenv().Speed == true do    
+        game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = getgenv().Speed_Value
+        wait() 
+        end
+    end)
+end
+function DoESP()
+    spawn(function()
+    while getgenv().ESPenabled == true do    
+        local players = game.Players:GetPlayers()
+        for i,v in pairs(players) do
+        local esp = Instance.new("Highlight")
+        esp.Name = v.Name
+        esp.FillTransparency = 0
+        esp.FillColor = Color3.new(1, 0.666667, 0)
+        esp.OutlineColor = Color3.new(getgenv().OUTLINECOLOR)
+        esp.OutlineTransparency = 0
+        esp.Parent = v.Character
+        
+        wait() 
+            end
+        end
+    end)
+end
+
+getgenv().Speed_Value = 16
+getgenv().Speed = false
+getgenv().ESPenabled = false
+getgenv().OUTLINECOLOR = 0, 0, 0
+
+
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Main"); 
 local LegitColunm1 = LegitTab:AddColumn();
 local LegitMain = LegitColunm1:AddSection("Local Player")
 
-local speed = 16;
 
 LegitMain:AddToggle{text = "Fly"}:AddSlider{text = "Fly Speed", min = 0, max = 100, value = 0, suffix = "‎ "}
-LegitMain:AddToggle{text = "Speed", callback = function(bool)
+LegitMain:AddToggle{text = "Speed(run to update)", callback = function(bool)
+    getgenv().Speed = bool
     if bool then
-        game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = speed
+        DoSpeed()
     else
         game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = 16
     end
-end}:AddSlider{text = "Speed", min = 0, max = 3000, value = 16, suffix = "‎ ", callback = function(speedValue)
-speed = speedValue
+end}:AddSlider{text = "Speed", min = 0, max = 368, value = 16, suffix = "‎ ", callback = function(speedValue)
+getgenv().Speed_Value = speedValue
     end}
 LegitMain:AddButton({text = "Reset Speed", callback = function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
@@ -155,6 +189,17 @@ local RageColunm1 = RageTab:AddColumn();
 local RageMain = RageColunm1:AddSection("Auto Wall")
 
 RageMain:AddDivider("Main");
+RageMain:AddColor{text = "ChamsOUTLINE", color = Color3.new(0.599623620510101318359375, 0.447115242481231689453125, 0.97174417972564697265625), callback = function(RER)
+    getgenv().OUTLINECOLOR = RER
+    print(RER)
+end}
+RageMain:AddColor{text = "ChamsINNER"}
+RageMain:AddToggle{text = "Chams", color = Color3.new(0.599623620510101318359375, 0.447115242481231689453125, 0.97174417972564697265625), callback = function(ESP)
+    getgenv().ESPenabled = ESP
+    if ESP then
+    DoESP()
+    end
+end}
 RageMain:AddToggle{text = "Enabled", flag = "AutoWallEnabled"}
 
 -- [Library Settings UI] -----------------------------------------------------------------------------------------------------------------------------------------------------
