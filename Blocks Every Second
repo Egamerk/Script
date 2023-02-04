@@ -4,13 +4,6 @@ function DoTap()
     spawn(function()
     while getgenv().AutoTa == true do    
     game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
-    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
-    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
-    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
-    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
-    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
-    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
-    game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
         wait() 
         end
     end)
