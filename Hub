@@ -10,4 +10,6 @@ elseif gp == 2976140098 then
    return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/Voxlblade", true))()
    elseif gp == 11800876530 then 
    return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/Blocks%20Every%20Second", true))()
+   elseif gp == 11542692507 then 
+   return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/Anime%20Souls%20Simulator", true))()
    end
