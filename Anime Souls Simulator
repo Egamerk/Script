@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/Jan", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/Anime%20Souls%20Simulator", true))()
 --Functions/Global Varibles
 function DoAttack()
     spawn(function()
