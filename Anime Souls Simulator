@@ -2,8 +2,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/G
 --Functions/Global Varibles
 function DoAttack()
     spawn(function()
-    while getgenv().AutoAttack == true do    
-        game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
+    while getgenv().AutoAttack == true do  
+        local args = {
+    [1] = {
+        [1] = "Hit"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Server:FireServer(unpack(args))
         wait() 
         end
     end)
