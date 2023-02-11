@@ -8,9 +8,18 @@ function DoSpeed()
         end
     end)
 end
+function DoMAXMANA()
+    spawn(function()
+   while 
+        game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.Mana.Value = getgenv().ManaValue
+        wait() 
+            end
+    end)
+end
+
 function DoESP()
     spawn(function()
-    while getgenv().ESPenabled == true do    
+         do    
         local players = game.Players:GetPlayers()
         for i,v in pairs(players) do
         local esp = Instance.new("Highlight")
@@ -31,7 +40,7 @@ getgenv().Speed_Value = 16
 getgenv().Speed = false
 getgenv().ESPenabled = false
 getgenv().OUTLINECOLOR = 0, 0, 0
-
+getgenv().ManaValue = 0
 
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Main"); 
@@ -58,7 +67,11 @@ LegitMain:AddSlider{text = "Mana % (Uncapped)", min = 0, max = 1000, value = 0, 
 	game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.Mana.Value = s
 end};
 LegitMain:AddSlider{text = "Mana % (Resets on G)", min = 0, max = 100, value = 0, suffix = "%", callback = function(s)
-	game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.Mana.Value = s
+    getgenv().ManaValue = s
+    if s then
+        DoMAXMANA()
+    else
+    end
 end};
 
 local LegitSecond = LegitColunm1:AddSection("Humanoid")
