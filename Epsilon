@@ -62,7 +62,7 @@ LegitMain:AddSlider{text = "Mana % (Resets on G)", min = 0, max = 100, value = 0
 end};
 
 local LegitSecond = LegitColunm1:AddSection("Humanoid")
-LegitMain:AddButton({text = "Omega", callback = function()
+LegitMain:AddButton({text = "Teleport to Omega", callback = function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1203.493896484375, -406.22760009765625, -4148.765625)
 end})
 LegitSecond:AddList({text = "Dungeons", flag = "AimbotKey", value = "Orden Dungeon", value = "Crock Room", value = "--", values = {"--", "Crock Room" ,"Orden Dungeon"}, callback = function(mob)
@@ -253,7 +253,7 @@ end, trans = 1, calltrans = function(trans)
 end});
 
 -- [Tile Size Slider]
-SettingSection:AddSlider({text = "Tile Size", min = 50, max = 500, value = 50, callback = function(size)
+SettingSection:AddSlider({text = "Tile Size", min = 50, max = 750, value = 50, callback = function(size)
     if library.main then
         library.main.TileSize = UDim2.new(0, size, 0, size);
     end
