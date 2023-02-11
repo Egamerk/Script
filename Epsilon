@@ -16,7 +16,24 @@ function DoMAXMANA()
             end
     end)
 end
-
+function DoESP()
+    spawn(function()
+         do    
+        local players = game.Players:GetPlayers()
+        for i,v in pairs(players) do
+        local esp = Instance.new("Highlight")
+        esp.Name = v.Name
+        esp.FillTransparency = 0
+        esp.FillColor = Color3.new(1, 0.666667, 0)
+        esp.OutlineColor = Color3.new(getgenv().OUTLINECOLOR)
+        esp.OutlineTransparency = 0
+        esp.Parent = v.Character
+        
+        wait() 
+            end
+        end
+    end)
+end
 function DoESP()
     spawn(function()
          do    
@@ -41,12 +58,13 @@ getgenv().Speed = false
 getgenv().ESPenabled = false
 getgenv().OUTLINECOLOR = 0, 0, 0
 getgenv().ManaValue = 0
+getgenv().NoClipEnable = false
 
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Main"); 
 local LegitColunm1 = LegitTab:AddColumn();
 local LegitMain = LegitColunm1:AddSection("Local Player")
-
+local Warning = library:AddWarning({type = "confirm"});
 
 LegitMain:AddToggle{text = "Fly"}:AddSlider{text = "Fly Speed", min = 0, max = 100, value = 0, suffix = "‎ "}
 LegitMain:AddToggle{text = "Speed(run to update)", callback = function(bool)
@@ -59,10 +77,6 @@ LegitMain:AddToggle{text = "Speed(run to update)", callback = function(bool)
 end}:AddSlider{text = "Speed", min = 0, max = 368, value = 16, suffix = "‎ ", callback = function(speedValue)
 getgenv().Speed_Value = speedValue
     end}
-LegitMain:AddButton({text = "Reset Speed", callback = function()
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = 16
-end});
 LegitMain:AddSlider{text = "Mana % (Uncapped)", min = 0, max = 1000, value = 0, suffix = "%", callback = function(s)
 	game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.Mana.Value = s
 end};
@@ -72,11 +86,20 @@ LegitMain:AddSlider{text = "Mana % (Resets on G)", min = 0, max = 100, value = 0
         DoMAXMANA()
     else
     end
-end};
+end}
+LegitMain:AddButton({text = "Respawn", callback = function()
+    Warning.text = "Are you sure you want to respawn if in combat you will lose a life";
+    if Warning:Show() then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2846.29736328125, -2960.252197265625, 440.06634521484375) 
+    end
+end});
 
 local LegitSecond = LegitColunm1:AddSection("Humanoid")
 LegitMain:AddButton({text = "Teleport to Omega", callback = function()
+    Warning.text = "Are you sure you want to teleport to omega If you do not have the class you will die";
+    if Warning:Show() then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1203.493896484375, -406.22760009765625, -4148.765625)
+end
 end})
 LegitSecond:AddList({text = "Dungeons", flag = "AimbotKey", value = "Orden Dungeon", value = "Crock Room", value = "--", values = {"--", "Crock Room" ,"Orden Dungeon"}, callback = function(mob)
     if mob == "Crock Room" then
@@ -91,6 +114,16 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5769, 32
                     a.Completed:Wait()
                 end
         end
+end})
+LegitSecond:AddButton({text = "Orden Remove Killbrick", callback = function()
+    local Part = Instance.new("Part")
+    Part.Anchored = true
+    Part.BottomSurface = Enum.SurfaceType.Smooth
+    Part.TopSurface = Enum.SurfaceType.Smooth
+    Part.Size = Vector3.new(1000, 3, 1500)
+    Part.CFrame = CFrame.new(4679.82080078125, -1418.910400390625, 497.01763916015625)
+    Part.Parent = workspace
+    
 end})
 LegitSecond:AddList({text = "Teleports", flag = "AimbotKey" , value = "Desert 9", value = "Desert 8", value = "Desert 7", value = "Desert 6", value = "Desert 5", value = "Desert 4", value = "Desert 3", value = "Desert 2", value = "Desert 1", value = "Tundra 7" , value = "Tundra 6" , value = "Tundra 5",  value = "Tundra 3", value = "Tundra 2" , value = "Tundra 1",  value = "Forest 7" , value = "Forest 6", value = "Forest 5" ,  value = "Forest 4" , value = "Forest 3" ,  value = "Forest 2"  , value = "Forest 1",  value = "Ores 3", value = "Ores 1", value = "Ores 2", value = "--", values = {"--", "Ores 1" ,"Ores 2" ,"Ores 3","Forest 1" , "Forest 2" , "Forest 3", "Forest 4", "Forest 5", "Forest 6", "Forest 7", "Tundra 1" , "Tundra 2" , "Tundra 3", "Tundra 5", "Tundra 6" , "Tundra 7", "Desert 1" , "Desert 1" , "Desert 2" , "Desert 3" , "Desert 4" , "Desert 5" , "Desert 6" , "Desert 7" , "Desert 8" , "Desert 9"}, callback = function(mob)
                     if mob == "Ores 1" then 
