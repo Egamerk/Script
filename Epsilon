@@ -10,7 +10,7 @@ function DoSpeed()
 end
 function DoMAXMANA()
     spawn(function()
-   while 
+   do
         game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.Mana.Value = getgenv().ManaValue
         wait() 
             end
