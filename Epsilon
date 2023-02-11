@@ -176,7 +176,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2712.741
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1309.0675048828125, 327.2904357910156, 681.7863159179688)
                                         a.Completed:Wait()
 								end
-					elseif mob == "Desert 3 then
+					elseif mob == "Desert 3" then
                                 while mob == "Desert 3" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1820.90869140625, 303.0936279296875, 653.6553344726562)
                                         a.Completed:Wait()
@@ -210,7 +210,6 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2712.741
                                 while mob == "Desert 9" do
                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2051.215087890625, 305.44366455078125, 1192.73974609375)
                                         a.Completed:Wait()
-								end
 										
             end
         end
