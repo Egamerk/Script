@@ -86,21 +86,9 @@ LegitMain:AddSlider{text = "Mana % (Resets on G)", min = 0, max = 100, value = 0
         DoMAXMANA()
     else
     end
-end}
-LegitMain:AddButton({text = "Respawn", callback = function()
-    Warning.text = "Are you sure you want to respawn if in combat you will lose a life";
-    if Warning:Show() then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2846.29736328125, -2960.252197265625, 440.06634521484375) 
-    end
-end});
+end};
 
 local LegitSecond = LegitColunm1:AddSection("Humanoid")
-LegitMain:AddButton({text = "Teleport to Omega", callback = function()
-    Warning.text = "Are you sure you want to teleport to omega If you do not have the class you will die";
-    if Warning:Show() then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1203.493896484375, -406.22760009765625, -4148.765625)
-end
-end})
 LegitSecond:AddList({text = "Dungeons", flag = "AimbotKey", value = "Orden Dungeon", value = "Crock Room", value = "--", values = {"--", "Crock Room" ,"Orden Dungeon"}, callback = function(mob)
     if mob == "Crock Room" then
         while mob == "Crock Room" do 
@@ -259,6 +247,16 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2712.741
 										
             end
         end
+end})
+LegitSecond:AddDivider("")
+LegitSecond:AddButton({text = "Hop Server", callback = function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+end})
+LegitSecond:AddButton({text = "Respawn", callback = function()
+    Warning.text = "Are you sure you want to respawn if in combat you will lose a life";
+    if Warning:Show() then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2846.29736328125, -2960.252197265625, 440.06634521484375) 
+    end
 end});
 
 local LegitThird = LegitColunm1:AddSection("Removals")
@@ -277,9 +275,19 @@ LegitThird:AddButton{text = "Remove Killbricks", callback = function()
     end
 end};
 local LegitColunm2 = LegitTab:AddColumn();
-local LegitForth = LegitColunm2:AddSection("Bullet Redirection")
 
+
+local LegitForth = LegitColunm2:AddSection("Interact")
 LegitForth:AddToggle{text = "Enabled", flag = "VisibleCheck"}
+LegitForth:AddButton{text = "Sell All", callback = function()
+    game:GetService("ReplicatedStorage").BulkSell:FireServer(1)
+end}
+LegitForth:AddButton({text = "Teleport to Omega", callback = function()
+    Warning.text = "Are you sure you want to teleport to omega If you do not have the class you will die";
+    if Warning:Show() then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1203.493896484375, -406.22760009765625, -4148.765625)
+end
+end})
 
 local LegitFifth = LegitColunm2:AddSection("Recoil Control")
 LegitFifth:AddSlider{text = "Camera Kick", flag = "CameraKick", min = 5, max = 100, value = 100, suffix = "%"}
