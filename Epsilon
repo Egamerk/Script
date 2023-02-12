@@ -250,7 +250,10 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2712.741
 end})
 LegitSecond:AddDivider("")
 LegitSecond:AddButton({text = "Hop Server", callback = function()
+    Warning.text = "Are you sure you want to hop server";
+    if Warning:Show() then
 game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+    end
 end})
 LegitSecond:AddButton({text = "Respawn", callback = function()
     Warning.text = "Are you sure you want to respawn if in combat you will lose a life";
@@ -299,7 +302,6 @@ local RageMain = RageColunm1:AddSection("Auto Wall")
 RageMain:AddDivider("Main");
 RageMain:AddColor{text = "ChamsOUTLINE", color = Color3.new(0.599623620510101318359375, 0.447115242481231689453125, 0.97174417972564697265625), callback = function(RER)
     getgenv().OUTLINECOLOR = RER
-    print(RER)
 end}
 RageMain:AddColor{text = "ChamsINNER"}
 RageMain:AddToggle{text = "Chams", color = Color3.new(0.599623620510101318359375, 0.447115242481231689453125, 0.97174417972564697265625), callback = function(ESP)
@@ -318,7 +320,7 @@ local SettingSection = SettingsColumn:AddSection("Menu");
 local ConfigSection = SettingsColumn2:AddSection("Configs");
 local Warning = library:AddWarning({type = "confirm"});
 
-SettingSection:AddBind({text = "Open / Close", flag = "UI Toggle", nomouse = true, key = "End", callback = function()
+SettingSection:AddBind({text = "Open / Close", flag = "UI Toggle", nomouse = true, key = "LeftAlt", callback = function()
     library:Close();
 end});
 
@@ -340,7 +342,7 @@ local backgroundlist = {
 };
 
 -- [Background List]
-local back = SettingSection:AddList({text = "Background", max = 4, flag = "background", values = {"Floral", "Flowers", "Circles", "Hearts"}, value = "Floral", callback = function(v)
+local back = SettingSection:AddList({text = "Background", max = 4, flag = "background", values = {"Floral", "Flowers", "Circles", "Hearts"}, value = "Flowers", callback = function(v)
     if library.main then
         library.main.Image = backgroundlist[v];
     end
@@ -358,14 +360,10 @@ end, trans = 1, calltrans = function(trans)
 end});
 
 -- [Tile Size Slider]
-SettingSection:AddSlider({text = "Tile Size", min = 50, max = 750, value = 50, callback = function(size)
+SettingSection:AddSlider({text = "Tile Size", min = 50, max = 750, value = 235, callback = function(size)
     if library.main then
         library.main.TileSize = UDim2.new(0, size, 0, size);
     end
-end});
-
-SettingSection:AddSlider({text = "Tile Size", min = 0, max = 100, value = 10, callback = function(speed)
- local tweenspeed = speed
 end});
 
 -- [Discord Button]
