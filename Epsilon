@@ -259,12 +259,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2712.741
 										
             end
         end
-end})
-LegitSecond:AddToggle{text = "Enabled", flag = "AimbotEnabled" }
-LegitSecond:AddSlider{text = "Aimbot FOV", flag = "AimbotFov", min = 0, max = 750, value = 105, suffix = "°"}
-LegitSecond:AddList({text = "Aimbot Key", flag = "AimbotKey", value = "On Aim", values = {"On Aim", "On Shoot"}});
-LegitSecond:AddDivider("Draw Fov");
-LegitSecond:AddToggle{text = "Enabled", flag = "TriggerEnabled"}:AddBind({flag = "TriggerBind", key = "One"});
+end});
 
 local LegitThird = LegitColunm1:AddSection("Removals")
 LegitThird:AddToggle{text = "Nofall(Cant Turn Off)", callback = function(Value)
@@ -276,6 +271,11 @@ LegitThird:AddToggle{text = "Nofall(Cant Turn Off)", callback = function(Value)
             end)
         end
     end};
+LegitThird:AddButton{text = "Remove Killbricks", callback = function()
+        for i,v in pairs(game:GetService("Workspace").Map.KillBricks:GetChildren()) do if v:IsA("Part") then v:Destroy()
+        end
+    end
+end};
 local LegitColunm2 = LegitTab:AddColumn();
 local LegitForth = LegitColunm2:AddSection("Bullet Redirection")
 
