@@ -34,6 +34,53 @@ function DoESP()
         end
     end)
 end
+function DoAttach()
+    spawn(function()
+        while getgenv().AttachToBack do
+            local UserInputService = game:GetService("UserInputService")
+            local Prssed = false
+
+            local function GetClosest()
+                local Character = game:GetService("Players").LocalPlayer.Character
+                local HumanoidRootPart = Character and Character:FindFirstChild("HumanoidRootPart")
+                if not (Character or HumanoidRootPart) then return end
+
+                local TargetDistance = 100
+                local Target
+
+                for i,v in ipairs(game:GetService("Players"):GetPlayers()) do
+                    if v ~= game:GetService("Players").LocalPlayer and v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
+                        local TargetHRP = v.Character.HumanoidRootPart
+                        local mag = (HumanoidRootPart.Position - TargetHRP.Position).magnitude
+                        if mag < TargetDistance then
+                            TargetDistance = mag
+                            Target = v
+                        end
+                    end
+                end
+
+                return Target
+            end
+
+            while getgenv().AttachToBack do
+                task.wait()
+                Prssed = true
+                if Prssed then
+                    if GetClosest() then
+                        local character = GetClosest().Character
+                        local EnemyHum = character:FindFirstChild("HumanoidRootPart")
+                        local distance = (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position - EnemyHum.Position).Magnitude
+                        if distance < 30 then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = EnemyHum.CFrame * CFrame.new(0,0,3.1)
+                        end
+                    end
+                end
+            end
+        end
+    end)
+end
+
+
 function DoESP()
     spawn(function()
          do    
@@ -59,6 +106,8 @@ getgenv().ESPenabled = false
 getgenv().OUTLINECOLOR = 0, 0, 0
 getgenv().ManaValue = 0
 getgenv().NoClipEnable = false
+getgenv().AttachtobackOn = false
+getgenv().AttachToBack = false
 
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Main"); 
@@ -249,6 +298,15 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2712.741
         end
 end})
 LegitSecond:AddDivider("")
+LegitSecond:AddToggle{text = "Attach to back", callback = function(Value)
+    getgenv().AttachtobackOn = value
+end}:AddBind{text = "r", callback = function(r)
+    getgenv().AttachToBack = r
+    if r then 
+        do DoAttach()
+        end
+    end 
+end}
 LegitSecond:AddButton({text = "Hop Server", callback = function()
     Warning.text = "Are you sure you want to hop server";
     if Warning:Show() then
