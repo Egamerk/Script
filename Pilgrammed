@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/Jan", true))()
+loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/Pilgrammed", true))()", true))()
 --Functions/Global Varibles--------------------------------------------------------------------------------------------------------------------------------------------------
 function DoSpeed()
     spawn(function()
