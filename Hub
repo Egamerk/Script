@@ -2,7 +2,7 @@ local gp = game.PlaceId
 
 if gp == 9530846958 then 
    return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Epsilon'))()
-elseif gp == 2976140098 then 
+   elseif gp == 2976140098 then 
    return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Fakewoken%203'))()
    elseif gp == 11040063484 then 
    return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/SwordSimulator", true))()
@@ -13,9 +13,5 @@ elseif gp == 2976140098 then
    elseif gp == 11542692507 then 
    return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/Anime%20Souls%20Simulator", true))()
    elseif gp == 6735572261 then 
-<<<<<<< HEAD
-   return loadstring(game:HttpGet('https://raw.githubusercontent.com/Egamerk/Script/main/Fakewoken%203'))()
-=======
    return loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Script/main/Pilgrammed"))()
->>>>>>> e17a93d400280bdd1fef5af545ce9ec61c754649
    end
