@@ -175,14 +175,19 @@ local LegitMain = LegitColunm1:AddSection("Local Player")
 local Warning = library:AddWarning({type = "confirm"});
 
 LegitMain:AddToggle{text = "Fly"}:AddSlider{text = "Fly Speed", min = 0, max = 100, value = 0, suffix = "‎ "}
-LegitMain:AddToggle{text = "Speed(run to update)", callback = function(bool)
+local SpeedToggle = LegitMain:AddToggle{text = "Speed(run to update)", callback = function(bool)
+    getgenv().SpeedEnabled = bool
     getgenv().Speed = bool
     if bool then
         DoSpeed()
     else
         game:GetService("Workspace").Alive[game.Players.LocalPlayer.Name].Stats.WalkSpeed.Value = 16
     end
-end}:AddSlider{text = "Speed", min = 0, max = 368, value = 16, suffix = "‎ ", callback = function(speedValue)
+end}
+local SpeedBind = SpeedToggle:AddBind({text = "Keybind", flag = "Keybind", nomouse = false, key = "N", callback = function(r)
+    SpeedToggle:SetState(r)
+end})
+local SpeedSlider = SpeedToggle:AddSlider{text = "Speed", min = 0, max = 368, value = 16, suffix = "‎ ", callback = function(speedValue)
 getgenv().Speed_Value = speedValue
     end}
 LegitMain:AddSlider{text = "Mana % (Uncapped)", min = 0, max = 1000, value = 0, suffix = "%", callback = function(s)
