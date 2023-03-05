@@ -419,7 +419,7 @@ end})
 LegitSecond:AddButton({text = "Respawn", callback = function()
     Warning.text = "Are you sure you want to respawn IF YOU'RE IN COMBAT you WILL lose a life";
     if Warning:Show() then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2846.29736328125, -2960.252197265625, 440.06634521484375) 
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0 
     end
 end});
 
