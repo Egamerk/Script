@@ -1,16 +1,5 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/GUI%20Names/AFR", true))()
 --Functions/Global Varibles
-function DoAttack()
-    spawn(function()
-    while getgenv().AutoAttack == true do    
-        game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
-        wait() 
-        end
-    end)
-end
-getgenv().AutoAttack = false
-
-
 
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Legit"); 
@@ -18,12 +7,6 @@ local LegitColunm1 = LegitTab:AddColumn();
 local LegitMain = LegitColunm1:AddSection("Aim Assist")
 
 LegitMain:AddDivider("Main");
-LegitMain:AddToggle{text= "Auto Attack" , callback = function(Attack)
-    getgenv().AutoAttack = Attack
- if Attack then 
-    DoAttack()
- end
-end}
 LegitMain:AddToggle{text = "Enabled", flag = "AimbotEnabled"}
 LegitMain:AddSlider{text = "Aimbot FOV", flag = "AimbotFov", min = 0, max = 750, value = 105, suffix = "°"}
 LegitMain:AddSlider{text = "Smoothing Factor", flag = "Smoothing", min = 0, max = 30, value = 3, suffix = "%"}
